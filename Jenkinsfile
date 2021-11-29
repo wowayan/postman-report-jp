@@ -1,4 +1,4 @@
-def postmanImage = "projectrp/newman-reportportal:latest"
+def postmanImage = "projectrp/newman-reportportal:v12"
 
 pipeline {
       agent {
@@ -19,6 +19,7 @@ pipeline {
         sh "which npm"
         sh "node --version"
         sh "npm --version"
+        
         sh "newman run security/collection.json \
     -r @reportportal/agent-js-postman \
     --reporter-@reportportal/agent-js-postman-debug=true \
