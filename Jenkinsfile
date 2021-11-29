@@ -14,6 +14,7 @@ pipeline {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
         sh "ls -la"
         sh "pwd"
+        sh "ping localhost:8080"
         sh "which newman"
         sh "which node"
         sh "which npm"
@@ -22,7 +23,7 @@ pipeline {
         sh "newman run security/collection.json \
     -r @reportportal/agent-js-postman \
     --reporter-@reportportal/agent-js-postman-debug=true \
-    --reporter-@reportportal/agent-js-postman-endpoint=http://127.0.0.1:8080 \
+    --reporter-@reportportal/agent-js-postman-endpoint=http://localhost:8080 \
     --reporter-@reportportal/agent-js-postman-token=5645304b-57fa-4896-87d7-48182574a1f4 \
     --reporter-@reportportal/agent-js-postman-launch=superadmin_TEST_EXAMPLE \
     --reporter-@reportportal/agent-js-postman-project=superadmin_personal \
