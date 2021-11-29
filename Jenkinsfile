@@ -4,7 +4,7 @@ pipeline {
       agent {
         docker {
           image "${postmanImage}"
-          args '-v $pwd/security/:/newman --network=mynet --entrypoint='
+          args '-v $pwd/security/:/newman --entrypoint='
         }
       }
   stages {
