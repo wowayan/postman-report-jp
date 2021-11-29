@@ -20,7 +20,7 @@ pipeline {
         sh "node --version"
         sh "npm --version"
         
-        sh "newman run jmeter/collection.json \
+        sh "newman run security/collection.json \
     -r @reportportal/agent-js-postman \
     --reporter-@reportportal/agent-js-postman-debug=true \
     --reporter-@reportportal/agent-js-postman-endpoint=https://reportportal.dev.juiceplus.net \
