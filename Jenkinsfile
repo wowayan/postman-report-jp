@@ -4,11 +4,11 @@ pipeline {
       agent {
         docker {
           image "${postmanImage}"
-          args '--entrypoint='
+          args '-v $pwd/security/:/newman --entrypoint='
         }
       }
   stages {
-    stage('Postman-report-test') {
+    stage('Postman-Report-test') {
       steps {
         checkout scm
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
