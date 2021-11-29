@@ -11,9 +11,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{urls}}/loyaltyPrograms",
+					"raw": "https://partner-loyalty.dev.juiceplus.net//loyaltyPrograms",
 					"host": [
-						"{{urls}}"
+						"https://partner-loyalty.dev.juiceplus.net//loyaltyPrograms"
 					],
 					"path": [
 						"loyaltyPrograms"
