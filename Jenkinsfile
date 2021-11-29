@@ -14,7 +14,6 @@ pipeline {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
         sh "ls -la"
         sh "pwd"
-        sh "ping localhost:8080"
         sh "which newman"
         sh "which node"
         sh "which npm"
